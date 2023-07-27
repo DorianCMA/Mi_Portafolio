@@ -1,0 +1,18 @@
+.button:hover .arrow {
+    transform: rotate(90deg);
+    color: #000;
+   transition: all .3s;
+  }
+.button:hover {
+   
+    background-color: #ff7b00;
+    color: #000;
+    transition: all .6s;
+  }
+  header{
+    background-image: url('${YourSVGImage}');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+
+  }
