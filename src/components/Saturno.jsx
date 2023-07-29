@@ -17,10 +17,10 @@ const Star = ({ p }) => {
   const ref = useRef();
 
   useLayoutEffect(() => {
-    const distance = mix(2, 3.5, Math.random());
+    const distance = mix(1.5, 3.5, Math.random());
     const yAngle = mix(
-      degreesToRadians(70),
       degreesToRadians(50),
+      degreesToRadians(20),
       Math.random()
     );
     const xAngle = degreesToRadians(360) * p;
@@ -29,13 +29,13 @@ const Star = ({ p }) => {
 
   return (
     <mesh ref={ref}>
-      <boxGeometry args={[0.015, 0.015, 0.015]} />
+      <boxGeometry args={[.015, 0.015, 0.015]} />
       <meshBasicMaterial wireframe color={color} />
     </mesh>
   );
 };
 
-function Scene({ numStars = 550 }) {
+function Scene({ numStars = 500 }) {
   const gl = useThree((state) => state.gl);
   const { scrollYProgress } = useScroll();
   const yAngle = useTransform(
@@ -73,10 +73,13 @@ function Scene({ numStars = 550 }) {
 
 export default function AnimatedScene() {
   return (
-    <div className="w-full h-full ">
+    <div className="">
+
+    <div className="h-[300px] ">
       <Canvas gl={{ antialias: false }}>
         <Scene />
       </Canvas>
+    </div>
     </div>
   );
 }
