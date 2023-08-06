@@ -19,7 +19,7 @@ export const Nav = () => {
     
     <div className={`nav_items ${isOpen ? "open " : " "}`}>
    
-        <a href="#inicio">
+        <a href="/.">
             Inicio
         </a>
         <a href="#nosotros">
